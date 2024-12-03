@@ -81,7 +81,7 @@ class VoltageClient:
 async def main():
     local_ip = "0.0.0.0"
     local_port = 7534 # Sending port
-    remote_ip = "192.168.50.245"  # Robot IP
+    remote_ip = "100.65.149.245"  # Robot IP, if used with NetBird, put the provided ip address of the Robot/Jetson.
     remote_port = 7533 #Jetson's listening port
 
     loop = asyncio.get_event_loop()

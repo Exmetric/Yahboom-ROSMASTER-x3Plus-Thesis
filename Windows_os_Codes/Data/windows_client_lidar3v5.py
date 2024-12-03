@@ -128,7 +128,7 @@ class LidarClient:
 async def main():
     local_ip = "0.0.0.0"
     local_port = 7536 # Sending port
-    remote_ip = "192.168.50.245"  # Jetson's LAN IP
+    remote_ip = "100.65.149.245"  # Jetson's LAN IP
     remote_port = 7535 # Listening port on Jetson
 
     loop = asyncio.get_event_loop()

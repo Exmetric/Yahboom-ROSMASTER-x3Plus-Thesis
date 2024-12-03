@@ -165,8 +165,8 @@ async def message_handler(message: dict, addr):
 async def main():
     local_ip = "0.0.0.0"
     local_port = 7531 # Sedning port of this device
-    remote_ip = "192.168.50.245"  # The Jetson's LAN IP
-    remote_port = 7532 # Listening port of other device
+    remote_ip = "100.65.149.245"  # The Jetson's LAN IP, if set up with NetBird, change to the provided ip of the Jetson/Yahboom peer.
+    remote_port = 7532 # Listening port of Jetson device
 
     communicator = UDPCommunicator(local_ip, local_port, remote_ip, remote_port)
     communicator.set_message_callback(message_handler)

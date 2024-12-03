@@ -103,7 +103,7 @@ class VelocityClient:
 async def main():
     local_ip = "0.0.0.0"
     local_port = 7532
-    remote_ip = "192.168.50.245"  # The robot's IP
+    remote_ip = "100.65.149.245"  # The robot's IP, if set up with NetBird, put in the provided ip adress for the Jetson/robot.
     remote_port = 7531
 
     # Create and get the event loop
