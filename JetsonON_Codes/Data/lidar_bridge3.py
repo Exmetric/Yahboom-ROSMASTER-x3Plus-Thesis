@@ -97,7 +97,7 @@ def run_ros_spin():
 async def main():
     local_ip = "0.0.0.0"
     local_port = 7535  # Different from velocity and voltage ports
-    remote_ip = "192.168.50.252"  # Windows client IP
+    remote_ip = "100.65.62.108"  # Windows client IP, if using netbird etc...
     remote_port = 7536
 
     loop = asyncio.get_event_loop()
