@@ -1,0 +1,9 @@
+1. Install Anaconda and VSCode on your windows computer.
+
+2. Open Anaconda, in the terminal run "conda create -n controltest python=3.11" # You can name the file whatever you want, here I chose control test
+
+3. Proceed (y/n)? Enter "y"
+
+4. Run in terminal "activate controltest" , you will need to install the required libraries we have used in our python codes and we will do this in our virtual environment so that we dont get contradictions between the versions of the libraries.
+
+5.
