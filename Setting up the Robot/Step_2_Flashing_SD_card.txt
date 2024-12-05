@@ -4,4 +4,4 @@ Download any program that can flash a file, like balenaEtcher or RasPi Imager to
 
 Run the balenaEtcher, choose your downloaded img file (JetPack 5.1.1) to flash, select your SD card as the target and click flash. Wait for flash and verification.
 
-And you are done.
+And take the SD card out when finished. 
