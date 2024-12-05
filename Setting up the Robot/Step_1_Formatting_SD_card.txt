@@ -1,0 +1,19 @@
+If you buy the Robot with any of the jetson series you will not need to flash the img file yourself as it comes pre-flashed from factory.
+
+If using your own Jetson Orin Nano, you will need to flash JetPack 5.1.1 to an micro-SD card. 
+To flash the Jetson Orin Nano with Jetpack 5.1.1, you need to have a computer with ubuntu version 20.04 or 18.04. You can use a virtual machine as mentioned on the Yahboom Repo but it's more complicated.
+
+You will need to first format a SD card before putting it into the Jetson Orin Nano. You can watch this [youtube video](https://www.youtube.com/watch?v=DdCmPeE8kRU) on how to format a micro SD card.
+
+
+If the video in the future gets removed, here are the instructions by text: 
+
+Open your windows computer and insert the SD card. Next run the command prompt as an administrator. Then type in the command line "diskpart".
+After enter the command "list disk". You will be able to see your SD card there as one of the disks. 
+Be very carefull for the next step, you need to identify which one is your SD card. 
+You do not want to erase your hard drive, remove the SD card from the computer, and enter the command "list disk" again. Take note of which disk disappeared from the list. 
+The one that has disappeared is your SD card. Put back the SD card into the computer. Now enter "select disk" "your SD card disk number".
+Enter command "clean", then enter the command "create primary partition". Then enter the command ""format fs=ntfs Quick"" for NTFS, "format fs=fat32 Quick" for FAT32, and "format fs=exfat Quick"" for exFA.
+If your SD card is large, it will give an error but no problem. Enter the command "exit", then open your SD card location, in My Computer or This PC. 
+Now you should be able to right click on it, and click format. You can choose the format type, make sure it is linux compatible format. Choose fat32.
+
