@@ -1,3 +1,4 @@
+# This version of the lidar code is an improved version where the same actual datat is being shown on the client side
 # On the jetson, run "roslaunch ydlidar_ros_driver TG.launch" in the command
 # Then you need to run the code "lidar_bridge3.py" through another terminal, wherever your file is
 # Then run this code on the windows device
