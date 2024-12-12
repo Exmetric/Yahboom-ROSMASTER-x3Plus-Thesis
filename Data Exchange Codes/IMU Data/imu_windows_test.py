@@ -87,9 +87,9 @@ class IMUClient:
 
 async def main():
     local_ip = "0.0.0.0"
-    local_port = 7541  # Client receiving port
+    local_port = 7541  # Wiindows client receiving port
     remote_ip = "100.65.149.245"  # Robot IP, if using netbird vpn, use ip adress provided of robot
-    remote_port = 7540  # Robot's listening port
+    remote_port = 7540  # Robot/Jetson's listening port
 
     loop = asyncio.get_event_loop()
     client = IMUClient(local_ip, local_port, remote_ip, remote_port)

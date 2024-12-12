@@ -126,9 +126,9 @@ class IMUNetworkBridge:
 
 async def main():
     local_ip = "0.0.0.0"
-    local_port = 7540  # Robot's listening port
+    local_port = 7540  # Robot/Jetson's listening port
     remote_ip = "100.65.62.108"  # Windows client IP, if using vpn netbird, use provided IP adress for windows client
-    remote_port = 7541  # Client's receiving port
+    remote_port = 7541  # Windows client's receiving port
 
     loop = asyncio.get_event_loop()
     bridge = IMUNetworkBridge(local_ip, local_port, remote_ip, remote_port)
