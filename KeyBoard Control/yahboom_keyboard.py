@@ -1,6 +1,6 @@
 #This code needs to be replaced with the original yahboom_keyboard.py file as the launch file initiates it.
 # original file is located in ~/yahboomcar_ws/src/yahboomcar_ctrl/scripts/yahboom_keyboard.py
-#This code was made to control both the wheels and the 6 sevo arm with the keyboard
+#This code is made to control both the wheels and the 6 sevo arm with the keyboard
 #!/usr/bin/env python3
 import rospy
 from geometry_msgs.msg import Twist
