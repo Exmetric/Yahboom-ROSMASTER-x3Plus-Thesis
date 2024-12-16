@@ -17,6 +17,7 @@ To be done:
 
 - Video streaming, depth camera and front camera dont function properly since they came from the factory.
 - Save lidar data as a .txt file to comprehend the data being sent (worked on a previous test code, to be implemented).
+- Others?
 
 In each folder, I will include the relevant codes and the step-by-step instructions on how to run the codes so that they work.
 
