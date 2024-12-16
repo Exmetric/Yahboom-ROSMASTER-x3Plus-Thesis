@@ -1,3 +1,4 @@
+#This code doesnt work with VPN Netbird, however it works perfectly over same Wifi and you get the data shown
 # This version of the lidar code is an improved version where the same actual datat is being shown on the client side
 # On the jetson, run "roslaunch ydlidar_ros_driver TG.launch" in the command
 # Then you need to run the code "lidar_bridge3.py" through another terminal, wherever your file is
@@ -128,9 +129,9 @@ class LidarClient:
 
 async def main():
     local_ip = "0.0.0.0"
-    local_port = 7536 # Sending port
+    local_port = 7539 # Sending port
     remote_ip = "100.65.149.245"  # Jetson's LAN IP, if with netbird etc...
-    remote_port = 7535 # Listening port on Jetson
+    remote_port = 7538 # Listening port on Jetson
 
     loop = asyncio.get_event_loop()
     client = LidarClient(local_ip, local_port, remote_ip, remote_port)
