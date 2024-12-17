@@ -1,0 +1,8 @@
+* 1. Run in the Jetson terminal "roscore", open a new terminal and run "roslaunch yahboomcar_bringup bringup.launch"
+* 2. In another terminal run "roslaunch yahboomcar_ctrl yahboom_keyboard.launch"
+* 3. On windows client pc, in VSCode run python code "Windows_keyboard_inputs.py" in terminal
+
+Notes
+- Make sure that when you are controlling the robot to not type in the programmed code itself, but rather in the terminal of the programme.
+- Location of the launch file is in... to be added.
+- "keyboard_reciever.py" is a code I made to be used as a library in the "yahboom_keyboard.py" (altered from original) code for Yahboom in the Jetson. 

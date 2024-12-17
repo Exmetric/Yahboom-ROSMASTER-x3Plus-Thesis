@@ -1,0 +1,6 @@
+* 1. Run in the Jetson terminal "roscore", open a new terminal and run "roslaunch ydlidar_ros_driver TG.launch"
+* 2. Location of the Jetson python code you need to run is ~/home/jetson/Desktop/udp/lidar_bridge_netbird.py
+* 3. Run in another terminal "python3 lidar_bridge_netbird.py"
+* 4. On windows client pc, in VSCode run python code "windows_client_netbird_LIDARSCAN_IMAGE.py" in terminal
+
+Note: Dont exit the lidar graph map with "X", rather go to the terminal of VSCode and terminate with "ctrl + c". The graph seems to crash if exited normally, I will fix in the future. 
