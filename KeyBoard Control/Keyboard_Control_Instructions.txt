@@ -1,8 +1,19 @@
-* 1. Run in the Jetson terminal "roscore", open a new terminal and run "roslaunch yahboomcar_bringup bringup.launch"
-* 2. In another terminal run "roslaunch yahboomcar_ctrl yahboom_keyboard.launch"
-* 3. On windows client pc, in VSCode run python code "Windows_keyboard_inputs.py" in terminal
+Step by step procedures for setting up remote VPN Keyboard Control on a new yahboom robot:
 
-Notes
-- Make sure that when you are controlling the robot to not type in the programmed code itself, but rather in the terminal of the programme.
-- Location of the launch file is in... to be added.
-- "keyboard_reciever.py" is a code I made to be used as a library in the "yahboom_keyboard.py" (altered from original) code for Yahboom in the Jetson. 
+1. Have the jetson running and open this github in background.
+2. In the jetson, go to filepath: ~/home/jetson/yahboomcar_ws/src/yahboomcar_ctrl/scripts .
+3. Make a backup of "yahboom_keybaord.py" as "yahboom_keyboard(copy).py in the scripts folder.
+4. Open "yahboom_keyboard.py" with VSCode or gedit. DO NOT OPEN THE COPY.
+5. Remove all lines of code.
+6. Copy python code from my github "yahboom_keyboard_copy_this.py" .
+7. Save it as the original name, as "yahboom_keyboard.py" .
+
+8. After that, in the jetson go to filepath: ~/home/jetson/yahboomcar_ws/src/yahboomcar_ctrl/scripts/ .
+9. With VSCode or gedit, create a python file called "keyboard_receiver.py" in the scripts folder.
+10. Copy python code from my github "keyboard_receiver.py"
+11. Save it as the same name on my github "keyboard_receiver.py".
+
+
+
+
+

@@ -1,6 +1,6 @@
 # Yahboom Rosmaster x3Plus Thesis
 
-This is a brief github repo for all codes, some guides, and specific functions for my thesis at Metropolia UAS. Metropolia has purchased a robot from Yahboom China to be used in a course for students, where the task would be to be operate this robot from remotely, while the robot is at the university, exchange data between the robot and the user, video stream and additional sensor data exchange.
+This is a brief github repo for all codes, some guides, and specific functions for my thesis at Metropolia UAS. Metropolia has purchased a robot from Yahboom China to be used in a course for students, where the task would be to be operate this robot remotely, while the robot is at the university, exchange data between the robot and the user, video stream and additional sensor data exchange.
 
 The robot is a Yahboom Rosmaster x3Plus, running on a jetson orin nano 8gb dev kit provided by Metropolia. 
 
@@ -8,9 +8,9 @@ Specific functions that I have managed to implement:
 
 - Implementing a python script to control the 6 servo robotic arm as well as the wheels over a different LAN (with a VPN) using a remote keyboard.
 - Exchanging lidar data between the robot and the user over a different WLAN with a VPN.
+- Acquire LIDAR data and project it to the client windows computer as a polar coord graph.
 - Exchanging voltage data between the robot and the user over a different WLAN with a VPN.
 - Exchanging velocity data between the robot and the user over a different WLAN with a VPN.
-- Acquire LIDAR data and project it to the client windows computer as a polar coord graph, over a VPN.
 - Added an external IMU sensor, to exchange gyroscope and accelerometer data over a different WLAN through a VPN.
 
 To be done: 
