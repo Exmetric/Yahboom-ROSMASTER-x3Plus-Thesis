@@ -1,7 +1,4 @@
-# On the jetson run "roscore"
-# In another terminal run "roslaunch yahboomcar_bringup bringup.launch", make sure you dont get any error messages under created thread
-# In another terminal run "roslaunch yahboomcar_ctrl yahboom_keyboard.launch"
-# Run this code on the windows client, and begin controlling the robot
+#Please red Keyboard_Control_Instructions.txt first
 import asyncio
 import json
 import logging
