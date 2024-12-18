@@ -13,7 +13,26 @@ Step by step procedures for setting up remote VPN Keyboard Control on a new yahb
 10. Copy python code from my github "keyboard_receiver.py"
 11. Save it as the same name on my github "keyboard_receiver.py".
 
+Now all the scripts and files are in place, we need to run them with ROS.
 
 
+* 1. Run in the Jetson terminal "roscore", open a new terminal and run "roslaunch yahboomcar_bringup bringup.launch"
+* 2. In another terminal run "roslaunch yahboomcar_ctrl yahboom_keyboard.launch"
+* 3. On windows client pc, in VSCode run python code "Windows_keyboard_inputs.py" in terminal
+
+You now have control of the robot wheels and servo arm, with a remote computer
 
 
+Notes:
+
+- Make sure that when you are controlling the robot to not type in the programmed code itself, but rather in the terminal of the programme.
+- Make sure the ip adresses are correct on both ends of code
+
+
+Troubleshooting (to be added)
+
+- No connectivity? 
+    Make sure the ip adresses and listening/sending ports (local/remote port in codes) are correct on both ends, Jetson and Windows client.
+
+- roslaunch yahboomcar_bringup bringup.launch command gives "Failed to receive IMU message" or similiar?
+    Terminate the command with "ctrl + c", and retry the command.
