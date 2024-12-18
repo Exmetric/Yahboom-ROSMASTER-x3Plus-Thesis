@@ -1,4 +1,4 @@
-#Please red Keyboard_Control_Instructions.txt first
+#Please red Keyboard_Control_Instructions.txt first, dont uncomment the next line. 
 #!/usr/bin/env python3
 import rospy
 from geometry_msgs.msg import Twist
@@ -36,7 +36,7 @@ moveBindings = {
     'j': (0, 1),    # Left
     ',': (-1, 0),   # Backward
     '.': (-1, -1),  # Backward + Right
-    'm': (-1, 1),   # Backward + Left
+    'm': (-1, 1),   # Backward + Left, k key is force stop but mentioned late in the code
 }
 
 speedBindings = {
@@ -65,8 +65,8 @@ class CombinedRobotController:
         
         # Arm control setup
         self.joint_pub = rospy.Publisher('/TargetAngle', ArmJoint, queue_size=10) #Subscribes to the /TargetAngle rostopic
-        self.step_size = 2.0 # Can change degree steps to your liking
-        self.current_angles = {1: 90.0, 2: 90.0, 3: 90.0, 4: 90.0, 5: 90.0, 6: 30.0}
+        self.step_size = 2.0 # Can change degree steps to your liking, 2 degrees seems the smoothest
+        self.current_angles = {1: 90.0, 2: 80.0, 3: 80.0, 4: 80.0, 5: 90.0, 6: 30.0} #Starting angles, I used these angles to avoid collisions in beginning  
         
         self.joint_limits = {
             1: (0, 180),    # joint1
@@ -86,7 +86,7 @@ class CombinedRobotController:
             '6': (6, 1), 'y': (6, -1)   # Gripper Servo motor, increase/decrease
         }
         
-        # Initialize keyboard receiver, the script we made
+        # Initialize keyboard receiver, the script I made to be imported
         self.receiver = KeyboardReceiver()
         
     def vels(self):
@@ -108,8 +108,8 @@ class CombinedRobotController:
             msg.angle = self.current_angles[joint_id]
             msg.joints = []
             
-            self.joint_pub.publish(msg)
-            print(f"Joint {joint_id}: {msg.angle:.1f}°")
+            self.joint_pub.publish(msg) 
+            print(f"Joint {joint_id}: {msg.angle:.1f}°") 
             return True
         return False
 
@@ -143,9 +143,9 @@ class CombinedRobotController:
                     if self.turn > self.angular_limit: self.turn = self.angular_limit
                     print(self.vels())
                 elif key in ['g', 'G']:
-                    self.xspeed_switch = not self.xspeed_switch
+                    self.xspeed_switch = not self.xspeed_switch #This function inverses the x and y speed direction by pressing g or G
                 elif key in ['h', 'H']:
-                    self.stop_movement = not self.stop_movement
+                    self.stop_movement = not self.stop_movement #if h or H key is pressed, no longer control the robot even if the movement keys are pressed
                     print(f"Movement control: {'disabled' if self.stop_movement else 'enabled'}")
                 else:
                     count = count + 1
