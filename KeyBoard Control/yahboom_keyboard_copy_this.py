@@ -36,7 +36,7 @@ moveBindings = {
     'j': (0, 1),    # Left
     ',': (-1, 0),   # Backward
     '.': (-1, -1),  # Backward + Right
-    'm': (-1, 1),   # Backward + Left, k key is force stop but mentioned late in the code
+    'm': (-1, 1),   # Backward + Left, k key is force stop but mentioned later 
 }
 
 speedBindings = {

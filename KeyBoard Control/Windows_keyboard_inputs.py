@@ -6,7 +6,7 @@ import logging
 import socket
 import time
 from typing import Optional, Callable
-import keyboard
+import keyboard 
 import threading
 import queue
 
@@ -53,8 +53,8 @@ class UDPCommunicator:
         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         
-        max_retries = 5
-        retry_delay = 1
+        max_retries = 5 #max retries before terminating entire code
+        retry_delay = 1 #delay in seconds between each retry
         
         for attempt in range(max_retries):
             try:
@@ -160,11 +160,11 @@ async def message_handler(message: dict, addr):
     """Handle incoming messages"""
     logger.info(f"Handling message from {addr}: {message}")
 
-async def main():
-    local_ip = "0.0.0.0"
-    local_port = 7531 # Sedning port of this device
-    remote_ip = "100.65.149.245"  # The Jetson's LAN IP, if set up with NetBird, change to the provided ip of the Jetson/Yahboom peer.
-    remote_port = 7532 # Listening port of Jetson device
+async def main():                   #Our communication parameters
+    local_ip = "0.0.0.0"            #Listen on all interfaces
+    local_port = 7531               #Sending port of this device
+    remote_ip = "100.65.149.245"    #The Jetson's LAN IP, if set up with NetBird, change to the provided ip of the Jetson/Yahboom peer.
+    remote_port = 7532              #Listening port of Jetson device
 
     communicator = UDPCommunicator(local_ip, local_port, remote_ip, remote_port)
     communicator.set_message_callback(message_handler)

@@ -1,3 +1,4 @@
+#Please read LIDAR_Data_Instructions.txt first, dont uncomment next line of code
 #!/usr/bin/env python3
 import rospy
 from sensor_msgs.msg import LaserScan

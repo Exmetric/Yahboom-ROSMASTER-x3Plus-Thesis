@@ -1,9 +1,9 @@
 If you buy the Robot with any of the jetson series you will not need to flash the img file yourself as it comes pre-flashed from factory.
 
-If using your own Jetson Orin Nano, you will need to flash JetPack 5.1.1 to an micro-SD card. 
+If using your own Jetson Orin Nano, you will need to flash JetPack 5.1.1 to a micro-SD card. 
 To flash the Jetson Orin Nano with Jetpack 5.1.1, you need to have a computer with ubuntu version 20.04 or 18.04. You can use a virtual machine as mentioned on the Yahboom Repo but it's more complicated.
 
-You will need to first format a SD card before putting it into the Jetson Orin Nano. You can watch this [youtube video](https://www.youtube.com/watch?v=DdCmPeE8kRU) on how to format a micro SD card.
+You will need to first format a micro SD card before putting it into the Jetson Orin Nano. You can watch this [youtube video](https://www.youtube.com/watch?v=DdCmPeE8kRU) on how to format a micro SD card.
 
 
 If the video in the future gets removed, here are the instructions by text: 

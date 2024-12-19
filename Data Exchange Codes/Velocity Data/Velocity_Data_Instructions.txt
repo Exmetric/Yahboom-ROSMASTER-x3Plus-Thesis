@@ -1,5 +1,5 @@
 * 1. Run in the Jetson terminal "roscore", open a new terminal and run "roslaunch yahboomcar_bringup bringup.launch"
-* 2. Location of the python code you need to run is ~/home/jetson/Desktop/udp/velocity_bridge.py
+* 2. Location of the Jetson python code you need to run is ~/home/jetson/Desktop/udp/velocity_bridge.py
 * 3. Run in another terminal "python3 velocity_bridge.py"
 * 4. On windows client pc, in VSCode run python code "windows_velocity_client.py" in terminal
 

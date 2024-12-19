@@ -1,9 +1,5 @@
 # Windows Client Side (Subscriber)
-#This code works beautifully, on the jetson first run in the command terminal "roscore"
-#Then in another terminal run "roslaunch ydlidar_ros_driver TG.launch" to start up the lidar
-#Then in another terminal run "python3 lidar_bridge_netbird.py"
-#Then run this code
-#Maybe later I will set up this code to run with roslaunch package making it easier
+#Please read the LIDAR_Data_Instructions.txt first
 #This code works using a TCP/IP connection rather than UDP, there might be a small delay in data, but nothing to complain
 import socket
 import pickle

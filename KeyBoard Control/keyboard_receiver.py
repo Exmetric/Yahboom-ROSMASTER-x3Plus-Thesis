@@ -1,5 +1,4 @@
-#T his python code needs to be added into the yahboomcar_ctrl - scripts folder. 
-# This is a library for the other script (yahboom_keyboard.py) that works with the launch file.
+#Please red Keyboard_Control_Instructions.txt first, dont uncommnet next line of code
 #!/usr/bin/env python
 import asyncio
 import json
