@@ -21,16 +21,16 @@ class VelocityNetworkBridge:
         self.client_registered = False
         self.running = True
        
-        # Create UDP socket
+        # Create the UDP socket
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.sock.bind((self.local_ip, self.local_port))
         self.sock.setblocking(False)
        
-        # Setup signal handlers
+        # Setup the signal handlers
         signal.signal(signal.SIGINT, self.signal_handler)
         signal.signal(signal.SIGTERM, self.signal_handler)
        
-        # Subscribe to velocity topic
+        # Subscribe to the velocity topic on the Jetson (rostopic list)
         self.vel_sub = rospy.Subscriber('/vel_raw', Twist, self.velocity_callback, queue_size=1)
        
         print(f"Velocity Bridge initialized on {local_ip}:{local_port}")
@@ -96,9 +96,9 @@ def run_ros_spin():
 
 async def main():
     local_ip = "0.0.0.0"
-    local_port = 7531
-    remote_ip = "192.168.50.252"  # The Windows client's IP
-    remote_port = 7532
+    local_port = 7531 #   
+    remote_ip = "100.65.62.108"  # The Windows client's IP, or netbird windows client ip
+    remote_port = 7532 #
 
     # Create and get the event loop
     loop = asyncio.get_event_loop()
