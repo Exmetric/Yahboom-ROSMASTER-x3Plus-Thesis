@@ -1,5 +1,16 @@
-When setting up the robot and connecting the wires as shown in the provided manual, make sure to NOT connect the voice module port (white cable).
-We need to bind the port of the voice module.
-On the yahboom website, they use a raspberry pi for their robot and claim the port binding would be the same with an jetson orin nano.
-Spoiler ahead, it's not. The file names are completely different. They even use a different robot model in the picture. But the process is somewhat the same.
+- When setting up the robot and connecting the wires as shown in the provided manual, make sure to NOT connect the voice module port (white cable).
 
+- We need to bind the port of the voice module.
+
+- On the yahboom website, they use a raspberry pi for their robot and claim the port binding would be the same with an jetson orin nano.
+
+- Spoiler ahead, it's not. The file names are completely different. They even use a different robot model in the picture. But the process is somewhat the same.
+
+- Check out Yahboom Repo Chapter 30 (Orin-Voice Control Course), Section 2 "Voice control module port binding"
+
+- How I did it: 
+
+1.
+
+
+cd etc, cd udev, cd rules.d, sudo gedit serial.rules

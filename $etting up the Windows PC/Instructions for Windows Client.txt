@@ -4,6 +4,22 @@
 
 3. Proceed (y/n)? Enter "y"
 
-4. Run in terminal "activate controltest" , you will need to install the required libraries we have used in our python codes and we will do this in our virtual environment so that we dont get contradictions between the versions of the libraries.
+4. Run in terminal (in base) "
 
-The libraries are 
+5. Run in terminal "activate controltest" , you will need to install the required libraries we have used in our python codes and we will do this in our virtual environment so that we dont get contradictions between the versions of the libraries.
+
+The libraries are: keyboard, asyncio, numpy, matplotlib
+
+conda install asyncio
+conda install conda-forge::matplotlib
+conda install conda-forge::numpy
+conda install conda-forge::keyboard
+
+There might be some libraries I have forgotten to mention, but all can be found online how to install. Also I am unsure of asyncio if it needs to be installed manually.
+
+asyncio, json, logging, socket, time, typing, threading, queue, pickle, signal, sys, datetime and struct are all a part of Python's standard library and dont need to be installed.
+
+
+Once the four libraries are installed, you have finished setting up the windows client.
+
+

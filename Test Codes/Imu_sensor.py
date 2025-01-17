@@ -5,7 +5,7 @@ import numpy as np
 # I am using an IMU MPU6886 sensor from the AIoT garage, connected to the Jetson Orin Nano on physical pins 2, 14, 27, and 28. I did not need to enable any GPIO pins as we are not using any.
 # The accelerometer readings seem to be accurate and working with in expected reange
 # The gyroscope readings are ok except the Z-axis readings, which could mean many things
-class MPU6886:
+class MPU6886: # sensor class from data sheet
     MPU6886_ADDRESS = 0x68
     PWR_MGMT_1 = 0x6B
     ACCEL_CONFIG = 0x1C
@@ -60,7 +60,7 @@ def main():
         accel = sensor.read_accelerometer()
         gyro = sensor.read_gyroscope()
         
-        print(f"Accelerometer (g): X={accel[0]:.2f}, Y={accel[1]:.2f}, Z={accel[2]:.2f}")
+        print(f"Accelerometer (g): X={accel[0]:.2f}, Y={accel[1]:.2f}, Z={accel[2]:.2f}") #These will print the data as a float number rounded to 2 decimal places
         print(f"Gyroscope (deg/s): X={gyro[0]:.2f}, Y={gyro[1]:.2f}, Z={gyro[2]:.2f}")
         print("-----------------")
         

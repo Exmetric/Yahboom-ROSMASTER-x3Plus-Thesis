@@ -1,9 +1,9 @@
 import asyncio
-import socket
-import pickle
-import signal
+import socket                   # Network communication, TCP or UDP
+import pickle                   # To transport data over the network, and convert data (bytes to Python object)
+import signal                   # Handler, like when pressing Ctrl + c
 import sys
-from datetime import datetime
+from datetime import datetime   
 
 class VelocityClient:
     def __init__(self, local_ip, local_port, remote_ip, remote_port):

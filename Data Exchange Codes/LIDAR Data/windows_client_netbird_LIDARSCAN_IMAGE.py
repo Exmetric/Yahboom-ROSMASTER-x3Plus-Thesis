@@ -1,10 +1,10 @@
 # Windows Client Side (Subscriber)
 #Please read the LIDAR_Data_Instructions.txt first
 #This code works using a TCP/IP connection rather than UDP, there might be a small delay in data, but nothing to complain
-import socket
-import pickle
+import socket                       # Network communication, TCP or UDP                   
+import pickle                       
 import struct
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt      
 import numpy as np
 import time
 from matplotlib.animation import FuncAnimation
