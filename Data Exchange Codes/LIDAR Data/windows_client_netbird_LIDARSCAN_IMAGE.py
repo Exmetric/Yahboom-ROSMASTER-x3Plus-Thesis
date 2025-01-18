@@ -2,7 +2,7 @@
 #Please read the LIDAR_Data_Instructions.txt first
 #This code works using a TCP/IP connection rather than UDP, there might be a small delay in data, but nothing to complain
 import socket                       # Network communication, TCP or UDP                   
-import pickle                       
+import pickle                       # To transport data over the network, and convert data (bytes to Python object)
 import struct
 import matplotlib.pyplot as plt      
 import numpy as np

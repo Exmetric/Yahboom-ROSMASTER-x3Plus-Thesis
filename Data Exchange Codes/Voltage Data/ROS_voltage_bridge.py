@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rospy
-from std_msgs.msg import Float32  # Voltage is published as Float32, single-precision floating point
-import socket
+from std_msgs.msg import Float32    # Voltage is published as Float32, single-precision floating point
+import socket                       # Network communication, TCP or UDP
 import pickle
 import signal
 import sys

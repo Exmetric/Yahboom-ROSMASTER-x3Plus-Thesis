@@ -10,7 +10,7 @@
 
 - How I did it: 
 
-1.
+1. 
 
 
 cd etc, cd udev, cd rules.d, sudo gedit serial.rules

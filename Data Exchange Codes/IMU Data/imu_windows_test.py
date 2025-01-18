@@ -7,11 +7,11 @@ from datetime import datetime   # Handling date and time operations
 
 class IMUClient:
     def __init__(self, local_ip, local_port, remote_ip, remote_port):   # Defining to make things easier/readable
-        self.local_ip = local_ip                                        # Stores local IP address
-        self.local_port = local_port                                    # Stores local port number
-        self.remote_ip = remote_ip                                      # Stores remote IP address
-        self.remote_port = remote_port                                  # Stores remote port number
-        self.running = True                                             # 
+        self.local_ip = local_ip                                        # Stores local IP address (Windows PC)
+        self.local_port = local_port                                    # Stores local port number (Windows PC)
+        self.remote_ip = remote_ip                                      # Stores remote IP address (Jetson)
+        self.remote_port = remote_port                                  # Stores remote port number (Jetson)
+        self.running = True                                              
         
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)    # We create the UDP socket
         self.sock.bind((self.local_ip, self.local_port))                # We need to bind the socket to the local address

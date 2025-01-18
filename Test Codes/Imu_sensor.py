@@ -60,7 +60,7 @@ def main():
         accel = sensor.read_accelerometer()
         gyro = sensor.read_gyroscope()
         
-        print(f"Accelerometer (g): X={accel[0]:.2f}, Y={accel[1]:.2f}, Z={accel[2]:.2f}") #These will print the data as a float number rounded to 2 decimal places
+        print(f"Accelerometer (g): X={accel[0]:.2f}, Y={accel[1]:.2f}, Z={accel[2]:.2f}") #These will print the X, Y, Z data as a float number rounded to 2 decimal places
         print(f"Gyroscope (deg/s): X={gyro[0]:.2f}, Y={gyro[1]:.2f}, Z={gyro[2]:.2f}")
         print("-----------------")
         

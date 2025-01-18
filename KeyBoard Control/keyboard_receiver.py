@@ -1,10 +1,10 @@
 #Please red Keyboard_Control_Instructions.txt first, dont uncommnet next line of code
 #!/usr/bin/env python
-import asyncio
-import json
+import asyncio                          # For asynchronous operations, allowing multiple processes at the same time
+import json                             
 import logging
-import socket
-from typing import Optional, Callable
+import socket                           # Network communication, TCP or UDP
+from typing import Optional, Callable   
 import threading
 import queue
 import rospy

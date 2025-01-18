@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rospy
-from geometry_msgs.msg import Twist
-import socket
+from geometry_msgs.msg import Twist     
+import socket                           # Network communication, TCP or UDP                         
 import pickle
 import signal
 import sys

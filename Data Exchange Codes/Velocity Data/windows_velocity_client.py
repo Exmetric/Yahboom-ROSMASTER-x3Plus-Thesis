@@ -1,9 +1,9 @@
-import asyncio
+import asyncio                  # For asynchronous operations, allowing multiple processes at the same time
 import socket                   # Network communication, TCP or UDP
 import pickle                   # To transport data over the network, and convert data (bytes to Python object)
 import signal                   # Handler, like when pressing Ctrl + c
-import sys
-from datetime import datetime   
+import sys                      # Needed for system specific parameters and functions
+from datetime import datetime   # Handling date and time operations  
 
 class VelocityClient:
     def __init__(self, local_ip, local_port, remote_ip, remote_port):

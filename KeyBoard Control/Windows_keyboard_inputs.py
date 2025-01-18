@@ -1,11 +1,11 @@
 #Please red Keyboard_Control_Instructions.txt first
 
-import asyncio
+import asyncio                              # For asynchronous operations, allowing multiple processes at the same time
 import json
 import logging
-import socket
+import socket                               # Network communication, TCP or UDP
 import time
-from typing import Optional, Callable
+from typing import Optional, Callable       
 import keyboard 
 import threading
 import queue
