@@ -1,5 +1,4 @@
 # Yahboom Rosmaster x3Plus Thesis
-git tag <Yahboom> <ROS> <Jetson> <rosmaster> <VPN> <X3PLUS> <IOT>
 
 This is a github repo for all codes, some guides, and specific functions for my thesis at Metropolia UAS. Metropolia has purchased a robot from Yahboom China to be used in a course for students, where the task would be to be operate this robot remotely, while the robot is at the university, exchange data between the robot and the user, video stream and additional sensor data exchange.
 
