@@ -17,9 +17,11 @@ conda install conda-forge::keyboard
 
 There might be some libraries I have forgotten to mention, but all can be found online how to install. Also I am unsure of asyncio if it needs to be installed manually.
 
-asyncio, json, logging, socket, time, typing, threading, queue, pickle, signal, sys, datetime and struct are all a part of Python's standard library and dont need to be installed.
+asyncio, json, logging, socket, time, typing, threading, queue, pickle, signal, sys, datetime and struct are all a part of Python's standard library and dont need to be installed separately.
 
 
-Once the four libraries are installed, you have finished setting up the windows client.
+Once the four libraries are installed, you will also need to setup the vpn Netbird.
+
+Instructions for installing and setting up the vpn can be found at netbird.io . You will need to make a free account and setup the Windows PC and the Jetson(linux devices).
 
 
