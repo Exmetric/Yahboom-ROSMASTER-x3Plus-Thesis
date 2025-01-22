@@ -1,9 +1,9 @@
 #Please red Keyboard_Control_Instructions.txt first, dont uncomment the next line. 
 #!/usr/bin/env python3
-import rospy
+import rospy                                        # ROS library
 from geometry_msgs.msg import Twist
 from yahboomcar_msgs.msg import ArmJoint
-from keyboard_receiver import KeyboardReceiver
+from keyboard_receiver import KeyboardReceiver      # Import our library that we made
 
 msg = """
 Combined Robot Control
@@ -64,9 +64,9 @@ class CombinedRobotController:
         self.stop_movement = False
         
         # Arm control setup
-        self.joint_pub = rospy.Publisher('/TargetAngle', ArmJoint, queue_size=10) #Subscribes to the /TargetAngle rostopic
-        self.step_size = 2.0 # Can change degree steps to your liking, 2 degrees seems the smoothest
-        self.current_angles = {1: 90.0, 2: 80.0, 3: 80.0, 4: 80.0, 5: 90.0, 6: 30.0} #Starting angles, I used these angles to avoid collisions in beginning  
+        self.joint_pub = rospy.Publisher('/TargetAngle', ArmJoint, queue_size=10)       # Subscribes to the /TargetAngle rostopic
+        self.step_size = 2.0                                                            # Can change degree steps to your liking, 2 degrees seems the smoothest
+        self.current_angles = {1: 90.0, 2: 80.0, 3: 80.0, 4: 80.0, 5: 90.0, 6: 30.0}    # Starting angles, I used these angles to avoid collisions in beginning  
         
         self.joint_limits = {
             1: (0, 180),    # joint1
@@ -86,7 +86,7 @@ class CombinedRobotController:
             '6': (6, 1), 'y': (6, -1)   # Gripper Servo motor, increase/decrease
         }
         
-        # Initialize keyboard receiver, the script I made to be imported
+        # Initializes keyboard receiver, the script I made to be imported
         self.receiver = KeyboardReceiver()
         
     def vels(self):
@@ -122,13 +122,13 @@ class CombinedRobotController:
             while not rospy.is_shutdown():
                 key = self.receiver.get_key()
                 
-                # Check arm controls first
+                # Checks arm controls first
                 if self.process_arm_control(key):
                     continue
                 
                 # Movement controls
                 if key == 'k':  # Force stop
-                    self.x = 0
+                    self.x = 0        
                     self.th = 0
                     count = 0
                 elif key in moveBindings.keys():
@@ -143,9 +143,9 @@ class CombinedRobotController:
                     if self.turn > self.angular_limit: self.turn = self.angular_limit
                     print(self.vels())
                 elif key in ['g', 'G']:
-                    self.xspeed_switch = not self.xspeed_switch #This function inverses the x and y speed direction by pressing g or G
+                    self.xspeed_switch = not self.xspeed_switch                         # This function inverses the x and y speed direction by pressing g or G
                 elif key in ['h', 'H']:
-                    self.stop_movement = not self.stop_movement #if h or H key is pressed, no longer control the robot even if the movement keys are pressed
+                    self.stop_movement = not self.stop_movement                         # If h or H key is pressed, no longer control the robot even if the movement keys are pressed
                     print(f"Movement control: {'disabled' if self.stop_movement else 'enabled'}")
                 else:
                     count = count + 1
@@ -168,7 +168,7 @@ class CombinedRobotController:
         except Exception as e:
             print(e)
         finally:
-            # Stop everything
+            # Stops everything
             self.move_pub.publish(Twist())
             self.receiver.stop()
 
