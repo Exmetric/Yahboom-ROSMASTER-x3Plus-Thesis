@@ -1,4 +1,4 @@
-#Please red Keyboard_Control_Instructions.txt first
+#Please read Keyboard_Control_Instructions.txt first
 
 import asyncio                              # For asynchronous operations, allowing multiple processes at the same time
 import json                                 # Used for decoding and encoding JSON data

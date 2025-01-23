@@ -1,4 +1,4 @@
-#Please red Keyboard_Control_Instructions.txt first, dont uncommnet next line of code
+#Please read Keyboard_Control_Instructions.txt first, dont uncommnet next line of code
 #!/usr/bin/env python
 import asyncio                              # For asynchronous operations, allowing multiple processes at the same time
 import json                                 # Used for decoding and encoding JSON data
