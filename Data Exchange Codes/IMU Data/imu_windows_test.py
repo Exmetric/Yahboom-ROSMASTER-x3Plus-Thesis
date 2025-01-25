@@ -79,7 +79,7 @@ class IMUClient:
             try:
                 data = await loop.sock_recv(self.sock, 65535)   # Recieve raw bytes (this is why we use pickle lib), we use the maximum of 65535 bytes here because the data is large
                 imu_data = pickle.loads(data)                   # Converts the bytes back to python object
-                self.print_imu_data(imu_data)                   # Prints the imu data
+                self.print_imu_data(imu_data)                   # Prints the IMU data
             except Exception as e:
                 if self.running:
                     print(f"Error receiving data: {e}")
@@ -97,7 +97,7 @@ async def main():
     if await client.register(loop):                 # Try to register
         print("Starting to receive IMU data...")    
         print("Press Ctrl+C to stop")
-        await client.receive_data(loop)             # Startts recieving data
+        await client.receive_data(loop)             # Starts recieving data
 
 if __name__ == '__main__':
     try:
