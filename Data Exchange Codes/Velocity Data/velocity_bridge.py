@@ -24,8 +24,8 @@ class VelocityNetworkBridge:
        
         # Creates the UDP socket and binds to the local address
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        self.sock.bind((self.local_ip, self.local_port))
-        self.sock.setblocking(False)
+        self.sock.bind((self.local_ip, self.local_port))                    # Binds to local address
+        self.sock.setblocking(False)                                        # Enables non-blocking mode
        
         # Setups the signal handlers, for shutdown (ctrl + c)
         signal.signal(signal.SIGINT, self.signal_handler)
