@@ -2,3 +2,5 @@
 * 2. Location of the Jetson python code you need to run is ~/home/jetson/Desktop/udp/ROS_voltage_bridge.py
 * 3. Run in another terminal "python3 ROS_voltage_bridge.py"
 * 4. On windows client pc, in VSCode run python code "windows_voltage.py" in terminal
+
+Note: Make sure you are connected to Netbird vpn on BOTH devices!

@@ -23,5 +23,8 @@ asyncio, json, logging, socket, time, typing, threading, queue, pickle, signal, 
 Once the four libraries are installed, you will also need to setup the vpn Netbird.
 
 Instructions for installing and setting up the vpn can be found at netbird.io . You will need to make a free account and setup the Windows PC and the Jetson(linux devices).
+Make sure to connect both devices to the netbird vpn before running the codes on the devices (pc and jetson).
+
+You have now successfully set up the windows client side. 
 
 

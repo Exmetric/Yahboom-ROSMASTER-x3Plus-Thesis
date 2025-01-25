@@ -3,4 +3,4 @@
 * 3. Run in another terminal "python3 velocity_bridge.py"
 * 4. On windows client pc, in VSCode run python code "windows_velocity_client.py" in terminal
 
-Note: Turn the joy stick on to control the car to see actual changes in velocity data.
+Note: Turn the joy stick on to control the car to see actual changes in velocity data. Make sure you are connected to Netbird vpn on BOTH devices!
