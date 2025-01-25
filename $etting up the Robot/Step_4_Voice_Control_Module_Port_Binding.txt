@@ -4,13 +4,16 @@
 
 - On the yahboom website, they use a raspberry pi for their robot and claim the port binding would be the same with an jetson orin nano.
 
-- Spoiler ahead, it's not. The file names are completely different. They even use a different robot model in the picture. But the process is somewhat the same.
+- Spoiler ahead, it's not. The file names are somewhat different. They even use a different robot model in the picture. But the process is somewhat the same.
 
 - Check out Yahboom Repo Chapter 30 (Orin-Voice Control Course), Section 2 "Voice control module port binding"
 
 - How I did it: 
 
-1. 
-
+1. Follow their instruction on changing the devices serial ID's for the voice port and the myserial.
+2. You will need to change the serial.rules file, not the ydlidar or rplidar.
+3. After changing the file, you will get a confirmed message like serial baudrate opened.
 
 cd etc, cd udev, cd rules.d, sudo gedit serial.rules
+
+The voice port module will work now, however the cameras will not work.
