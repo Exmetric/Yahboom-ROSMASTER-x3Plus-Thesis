@@ -11,9 +11,8 @@
 - How I did it: 
 
 1. Follow their instruction on changing the devices serial ID's for the voice port and the myserial.
-2. You will need to change the serial.rules file, not the ydlidar or rplidar.
-3. After changing the file, you will get a confirmed message like serial baudrate opened.
-
 cd etc, cd udev, cd rules.d, sudo gedit serial.rules
+2. You will need to change the serial.rules file, not the ydlidar or rplidar as they say.
+3. After changing the file, you will get a confirmed message like serial baudrate opened.
 
 The voice port module will work now, however the cameras will not work.
