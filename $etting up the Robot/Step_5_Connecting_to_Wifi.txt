@@ -1,2 +1,5 @@
 1. Open up settings
-2. 
+2. Turn off the hotspot, and connect to the Wifi.
+3. If connecting to ethernet, turn off the wifi.
+
+You should be able to connect to the wifi automatically on start up, instead of using the hotspot.
